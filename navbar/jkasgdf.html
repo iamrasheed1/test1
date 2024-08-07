@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hamid</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+nav{
+	height: 80px;
+	width: 100%;
+	background-color: transparent;
+	border-bottom: 1px solid white;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0px 0px 0px 150px;
+	cursor: pointer;
+	line-height: 80px;
+}
+ul{
+	float: right;
+	margin-right: 20px;
+}
+ul li{
+	display: inline-block;
+	list-style: none;
+	line-height: 80px;
+}
+ul li a{
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: .5s;
+}
+ul li a:hover{
+	color: white;
+	text-decoration: none;
+}
+.active{
+	background-color: #5e5e5e;
+}
+a.active,a:hover{
+	background-color:#5e5e5e ;
+}
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	float: right;
+	margin-right: 30px;
+	line-height: 80px;
+	display: none;
+}
+#check{
+	display: none;
+}
+@media(max-width: 952px){
+	.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	ul li a{
+		font-size: 13px;
+	}
+}
+@media(max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		background:transparent;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		padding: 50px 0px;
+		transition: all .5s;
+	}
+	ul li{
+		display: block;
+		padding: 20px 0px;
+	}
+	ul li a{
+		font-size: 20px;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+	#check:checked ~ section{
+		left: -100%;
+	}
+}
+@media(max-width: 858px){
+	#check:checked ~ section{
+		display: none;
+	}
+}
+body{
+	background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)) ,url(f.jpg);
+	height: calc(108vh - 80px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.main-text{
+	max-width: 550px;
+	position: absolute;
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.main-text span{
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+.main-text h1{
+	font-size: 3.5em
+}
+.main-text a{
+	letter-spacing: 5px;
+	color: white;
+	padding: 15px 20px;
+	background-color: indianred;
+	text-decoration: none;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: 0.5s;
+	text-transform: uppercase;
+}
+.main-text a:hover{
+	background-color:#5e5e5e ;
+
+}
+.logo-a{
+	color: white;
+	padding: 10px 20px;
+	background-color: indianred;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+		<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">hm store</label>
+		<ul>
+			<li><a href="" class="active">home</a></li>
+			<li><a href="">about</a></li>
+			<li><a href="">contact</a></li>
+			<li><a href="">feedback</a></li>
+			<li><a href="" class="logo-a">Register</a></li>
+		</ul>
+	</nav>
+	<section class="main-text">
+		<span>hm store</span>
+		<h1>WELCOME TO MY HM STORE</h1><br>
+		<a href="">view store</a>
+	</section>
+</body>
+</html>
